@@ -30,10 +30,10 @@ export const Card = props => {
                     <img className="img-fluid mx" src="https://us.123rf.com/450wm/azvector/azvector1803/azvector180300049/96953503-los-contactos-manejan-el-tel%C3%A9fono-la-agenda-la-agenda-la-agenda-el-icono-del-tel%C3%A9fono.jpg" alt={props.name} />
                 </div>
                 <div className="col-md-4 col-lg-6 mt-3 mx-auto">
-                    <h3>{props.name}</h3>
-                    <p>{props.phone}</p>
-                    <p>{props.email}</p>
-                    <p>{props.address}</p>
+                    <h3><i class="fa-solid fa-user-plus"></i>   {props.name}</h3>
+                    <p><i class="fa-solid fa-phone-volume"></i> {props.phone}</p>
+                    <p><i class="fa-solid fa-envelope"></i> {props.email}</p>
+                    <p><i class="fa-solid fa-location-dot"></i> {props.address}</p>
                     <button className="btn btn-danger me-2" onClick={handleDelete}>eliminar</button>
                     <button className="btn btn-primary me-2" onClick={handleEdit}>editar</button>
 
