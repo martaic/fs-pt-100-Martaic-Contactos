@@ -1,6 +1,7 @@
-export const initialStore=()=>{
-  return{
+export const initialStore = () => {
+  return {
     message: null,
+    agendas: null,
     todos: [
       {
         id: 1,
@@ -17,10 +18,21 @@ export const initialStore=()=>{
 }
 
 export default function storeReducer(store, action = {}) {
-  switch(action.type){
+  switch (action.type) {
+    case 'getUserAgenda':
+      return {
+        ...store, agenda: action.payload
+      }
+    case 'getAllAgendas':
+      return {
+        ...store,
+        agendas: action.payload
+      }
+
+
     case 'add_task':
 
-      const { id,  color } = action.payload
+      const { id, color } = action.payload
 
       return {
         ...store,
@@ -28,5 +40,6 @@ export default function storeReducer(store, action = {}) {
       };
     default:
       throw Error('Unknown action.');
-  }    
+  }
 }
+
