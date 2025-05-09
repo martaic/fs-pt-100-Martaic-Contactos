@@ -30,7 +30,7 @@ export const Home = () => {
 	const handleCreateUser = async () => {
 		try {
 			await contactService.createAgenda('minigoca');
-			await fetchAgenda('minigoca'); // para refrescar datos
+			await fetchAgenda('minigoca');
 		} catch (error) {
 			console.error("Error al crear el usuario:", error);
 		}
